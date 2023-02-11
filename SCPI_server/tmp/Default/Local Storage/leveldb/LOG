@@ -1,3 +1,6 @@
-2023/02/08-00:12:31.787 24a8 Reusing MANIFEST D:\Documents\VSC\SCPI_PROJECT\SCPI_server\tmp\Default\Local Storage\leveldb/MANIFEST-000001
-2023/02/08-00:12:31.787 24a8 Recovering log #6
-2023/02/08-00:12:31.787 24a8 Reusing old log D:\Documents\VSC\SCPI_PROJECT\SCPI_server\tmp\Default\Local Storage\leveldb/000006.log 
+2023/02/11-04:59:29.434 10fc Reusing MANIFEST D:\Documents\VSC\SCPI_PROJECT\SCPI_server\tmp\Default\Local Storage\leveldb/MANIFEST-000001
+2023/02/11-04:59:29.455 10fc Recovering log #6
+2023/02/11-04:59:29.455 10fc Reusing old log D:\Documents\VSC\SCPI_PROJECT\SCPI_server\tmp\Default\Local Storage\leveldb/000006.log 
+2023/02/11-05:00:37.928 10fc Level-0 table #10: started
+2023/02/11-05:00:38.143 10fc Level-0 table #10: 49925 bytes OK
+2023/02/11-05:00:38.227 10fc Delete type=0 #6
