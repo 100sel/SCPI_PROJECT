@@ -6,12 +6,12 @@ function App() {
   const [scpiList, setScpiList] = useState({});
 
   useEffect(() => {
-    RefreshView();
+    Refresh();
   }, []);
 
-  function RefreshView() {
-    console.log("fecthing /api/results");
-    fetch("/api/results").then(
+  function Refresh() {
+    console.log("fecthing /api/refresh");
+    fetch("/api/refresh").then(
       res => {
         return res.json()
       }
@@ -22,15 +22,9 @@ function App() {
     )
   }
 
-  function RefreshData() {
-    console.log("fecthing /api/refresh");
-    fetch("/api/refresh");
-  }
-
   return (
     <div className="App">
-      <button onClick ={RefreshData}>Refresh Data</button>
-      <button onClick ={RefreshView}>Refresh View</button>
+      <button onClick ={Refresh}>Refresh</button>
       {(typeof scpiList.scpiList === 'undefined' || scpiList.scpiList.length < 1) ? (
         <p>Loading...</p>
       ) : (
