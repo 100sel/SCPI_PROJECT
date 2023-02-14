@@ -3,27 +3,36 @@ const app = express()
 const fs = require('fs');
 const { GetData } = require('./getData')
 
-let scpiList = [];
+function Refresh() {
 
-const Refresh = new Promise((res) => {
-    console.log("Reading json");
-    fs.readFileSync('./data.json', data => {
-        console.log(JSON.parse(data));
-        scpiList = JSON.parse(data)}
-    );
+    async function Process() {
+        console.log("Reading json");
+        let jsonData = await fs.promises.readFile('../data.json', 'utf-8');       
+        let finalData;
 
-    if (scpiList.length < 1) {
-        console.log("Getting raw data");
-        GetData().then(data => {scpiList = data});
-        fs.writeFileSync('./data.json', JSON.stringify(scpiList));
+        if (jsonData.length < 3) {
+            console.log("Getting data");
+            let crawlerData = await GetData();
+            fs.writeFile('../data.json', JSON.stringify(crawlerData), () => console.log("JSON written"));
+            finalData = crawlerData;
+        } else {
+            finalData = await JSON.parse(jsonData);
+        }
+
+        return finalData
     }
 
-    res(scpiList);
-})
+    const Main = new Promise((res) => {    
+        let Data = Process();       
+        res(Data); 
+    });
+
+    return Main;
+}
 
 app.get("/api/refresh", (req, res) => {
-    console.log("refreshing data");
-    Refresh().then(res.json({ scpiList : scpiList}));
+    console.log("Refreshing data");
+    Refresh().then(data => res.json({ scpiList : data }));
 })
 
 app.listen(5000, () => { console.log("Server started on port 5000") });
