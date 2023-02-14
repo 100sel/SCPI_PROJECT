@@ -17,7 +17,7 @@ function App() {
     return (
         <div className="App">
             <button onClick={refresh}>Refresh</button>
-            {(typeof scpiList === 'undefined' || scpiList.length < 1) ? (
+            {(!scpiList?.length) ? (
                 <p>Loading...</p>
             ) : (
                 <ScpiHdl scpiList={scpiList}/>
