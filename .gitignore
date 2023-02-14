@@ -480,3 +480,5 @@ SCPI_server/tmp/Default/Session Storage/LOG
 SCPI_server/tmp/Default/Session Storage/LOG.old
 SCPI_server/tmp/Default/Session Storage/MANIFEST-000001
 SCPI_server/tmp/Default/WebStorage/QuotaManager
+/SCPI_server/node_modules
+/SCPI_frontend/node_modules
