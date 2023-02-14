@@ -1,4 +1,5 @@
 index, url, label, date creation, gestion, capital total, type capital, type marche, nb immeubles, surface totale, taux occupation, taux distrib, prix part, invest mini, frais souscri, frais gestion, anr, ran, pge
+<<<<<<< HEAD
 1, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI31732615500049/, ACCES VALEUR PIERRE, 1981, BNP PARIBAS REIM, 1464655481, Capital variable, Bureau, 73, 207598, 90.80%, 3.86%, 840, 0, 12.00%, -, 703, 78.79%, 5.87%
 2, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI35138047200057/, ACCIMMO PIERRE, 1992, BNP PARIBAS REIM, 3896482355, Capital variable, Bureau, 136, 1218357, 91.91%, 3.80%, 205, 203, 8.93%, 0.34%, 175, 5.04%, 1.32%
 3, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI32333966300052/, ACTIPIERRE 1, 1981, AEW CILOGER, 88510500, Capital fixe, Commerce, 65, 19377, 97.16%, 4.71%, 579, 2500, 5.40%, 0.48%, 632, 50.15%, 8.67%
@@ -92,3 +93,5 @@ index, url, label, date creation, gestion, capital total, type capital, type mar
 93, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI81184923100014/, VENDÔME REGIONS, 2015, NORMA CAPITAL, 350942450, Capital variable, Diversifiee, 96, 195644, 97.00%, 5.91%, 670, 3350, 10.00%, 0.51%, 601, 1.16%, 3.30%
 86, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI89899827300012/, SOFIDY EUROPE INVEST, 2021, SOFIDY, 49834335, Capital variable, Diversifiee, 4, , 100.00%, 2.05%, 235, 2350, 9.00%, -, , -, -
 84, https://www.boursorama.com/patrimoine/immobilier/scpi/cours/SCPI78485226100071/, SELECTINVEST 1, 1975, LA FRANCAISE REM, 1599088115, Capital variable, Bureau, 242, 517346, 89.30%, 4.10%, 640, 640, 6.25%, 0.47%, 610, 25.35%, 3.73%
+=======
+>>>>>>> 232fe2f8199692f1c23997c34d8163b91d1ef581
