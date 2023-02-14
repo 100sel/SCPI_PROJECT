@@ -17,6 +17,7 @@ function App() {
     return (
         <div className="App">
             <button onClick={refresh}>Refresh</button>
+            <p>{console.log(scpiList)}</p>
             {(!scpiList?.length) ? (
                 <p>Loading...</p>
             ) : (
