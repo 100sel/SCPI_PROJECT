@@ -5,24 +5,22 @@ const { GetData } = require('./getData')
 
 async function refresh() {
     console.log("Reading json");
-    let jsonData = await fs.promises.readFile('../data.json', 'utf-8');
-    let finalData;
+    try {
+        const jsonData = await fs.promises.readFile('./data.json', 'utf-8');
+        if (jsonData.length > 3) {
+            return JSON.parse(jsonData)
+        }
+    } catch (e) {}
 
-    if (jsonData.length < 3) {
-        console.log("Getting data");
-        let crawlerData = await GetData();
-        fs.writeFile('../data.json', JSON.stringify(crawlerData), () => console.log("JSON written"));
-        finalData = crawlerData;
-    } else {
-        finalData = await JSON.parse(jsonData);
-    }
-
-    return finalData;
+    console.log("Scrapping data");
+    let crawlerData = await GetData();
+    await fs.writeFile('./data.json', JSON.stringify(crawlerData), () => console.log("JSON written"));
+    return crawlerData;
 }
 
 app.get("/api/refresh", (req, res) => {
     console.log("Refreshing data");
-    refresh().then(data => res.json({ scpiList : data }));
+    refresh().then(data => res.json(data));
 })
 
 app.listen(5000, () => { console.log("Server started on port 5000") });
