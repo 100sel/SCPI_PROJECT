@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react'
-import ScpiHdl from './ScpiHdl'
+import React, { useEffect, useState, useMemo } from 'react'
+import { tableColumns} from './tableColumns'
+import Table from './tableComp'
 
 function App() {
 
@@ -14,16 +15,25 @@ function App() {
         fetch("/api/refresh").then(res => res.json()).then(setScpiList)
     }
 
+    const TABLECOLUMNS = useMemo(() => tableColumns, []);
+    const TABLEDATA = useMemo(()=> scpiList, [scpiList]);
+
     return (
         <div className="App">
-            <button onClick={refresh}>Refresh</button>
-            <p>{console.log(scpiList)}</p>
-            {(!scpiList?.length) ? (
-                <p>Loading...</p>
-            ) : (
-                <ScpiHdl scpiList={scpiList}/>
-            )
-            }
+
+            <header className="Header">
+                <h1 className="titlePage">SCPI DATA</h1>
+            </header>
+
+            <div className="dataTable">
+                <button onClick={refresh}>Refresh</button>
+                {(!scpiList?.length) ? (
+                    <p>Loading...</p>
+                ) : (
+                    <Table columns={TABLECOLUMNS} data={TABLEDATA} />
+                )
+                }
+            </div>
         </div>
     );
 }
