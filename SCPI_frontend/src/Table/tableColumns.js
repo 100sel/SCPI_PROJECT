@@ -10,7 +10,7 @@ export const tableColumns = [{
 }, {
     Header: "Capital Total", 
     accessor: "capital",
-    Cell: ({value}) => { return value + " €"}
+    Cell: ({value}) => { if(value) { return value + " €" } else { return "-" } }
 }, {
     Header: "Type de capital", 
     accessor: "typeCapital"
@@ -33,11 +33,11 @@ export const tableColumns = [{
 }, {
     Header: "Prix Part", 
     accessor: "prixPart",
-    Cell: ({value}) => { return value + " €"}
+    Cell: ({value}) => { if(value) { return value + " €" } else { return "-" } }
 }, {
     Header: "Investissement Minimum", 
     accessor: "investMini",
-    Cell: ({value}) => { return value + " €"}
+    Cell: ({value}) => { if(value) { return value + " €" } else { return "-" } }
 }, {
     Header: "Frais de souscription", 
     accessor: "fraisSouscri"
@@ -47,7 +47,7 @@ export const tableColumns = [{
 }, {
     Header: "Valeur ANR", 
     accessor: "valeurAnr",
-    Cell: ({value}) => { return value + " €"}
+    Cell: ({value}) => { if(value) { return value + " €" } else { return "-" } }
 }, {
     Header: "Valeur RAN", 
     accessor: "valeurRan"

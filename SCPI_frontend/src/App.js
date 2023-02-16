@@ -19,21 +19,22 @@ function App() {
     const TABLEDATA = useMemo(()=> scpiList, [scpiList]);
 
     return (
-        <div className="App">
+        <div class="container" className="App">
 
-            <header className="Header">
+            <header className="header" class="container">
                 <h1 className="titlePage">SCPI DATA</h1>
             </header>
 
-            <div className="dataTable">
-                <button onClick={refresh}>Refresh</button>
+            <main className="main" class="container">
+                <button className="buttonRefresh" onClick={refresh}>Refresh</button>
                 {(!scpiList?.length) ? (
                     <p>Loading...</p>
                 ) : (
+                    
                     <Table columns={TABLECOLUMNS} data={TABLEDATA} />
                 )
                 }
-            </div>
+            </main>
         </div>
     );
 }
