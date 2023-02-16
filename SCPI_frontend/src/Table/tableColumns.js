@@ -23,7 +23,7 @@ export const tableColumns = [{
 }, {
     Header: "Surface Totale", 
     accessor: "surfaceTotale",
-    Cell: ({value}) => { return value + " m²"}
+    Cell: ({value}) => { if(value) { return value + " m²" } else { return "-" } }
 }, {
     Header: "Taux d'occupation", 
     accessor: "tauxOccupation"
