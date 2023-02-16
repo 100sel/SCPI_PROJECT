@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react'
-import { tableColumns} from './tableColumns'
-import Table from './tableComp'
+import { tableColumns} from './Table/tableColumns'
+import Table from './Table/tableComp'
 
 function App() {
 
