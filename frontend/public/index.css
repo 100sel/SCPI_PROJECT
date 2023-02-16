@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.tableHdl {
+    height: 65vh;
+}
+
+.w-5.h-5 {
+    display: block;
+    height: 3vh;
+    width: 3vh;
+}
